@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="student.css"/> -->
+    <title>Officer Page</title>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        div{
+            border: 2px solid  black;
+            padding: 100px;
+            margin: 50px;
+            background: #E8F9FD;
+    
+        }
+        ul{ 
+            float: right; 
+            list-style: none; 
+            margin-top: 25px; 
+ 
+        } 
+        ul li{ 
+            display: inline-block; 
+        } 
+        ul li a{ 
+            text-decoration: none; 
+            color: red; 
+            padding: 5px 20px; 
+            border: 1px solid rgb(125, 67, 67); 
+        }             
+        ul li a:hover{ 
+            background-color: yellow; 
+            color: black; 
+        }  
+        ul li.active a{ 
+            background-color: green; 
+            color: black; 
+ 
+        }
+        * {
+        box-sizing: border-box;
+        }
+
+        #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+        }
+
+        #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        }
+
+        #myTable th, #myTable td {
+        text-align: left;
+        padding: 12px;
+        }
+
+        #myTable tr {
+        border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+        }
+        #MyTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        }
+
+        #MyTable th, #MyTable td {
+        text-align: left;
+        padding: 20px;
+        }
+
+        #MyTable tr {
+        border-bottom: 1px solid #ddd;
+        }
+
+        #MyTable tr.header, #myTable tr:hover {
+        background-color: #f1f1f1;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <ul class="Officer">
+        <li><a href="#list students">List Students</a></li>
+        <li><a href="#filter students">Filter Students</a></li>
+        <li><a href="createdrive.html">Create Drives</a></li>
+        <li><a href="announcement.html">Announcement</a></li>
+        <li><a href="">Blocking/Unblocking Student</a></li>
+        <li><a href="">Summary</a></li>
+    </ul>
+<br><br><br>
+<img src="officer-image.png"  alt="" style="width:100%">
+<br><br><br>
+    <h1 id="list students">List Students</h1>
+        
+    <div class="Profile">
+        
+        <br><br>
+        <table id="MyTable">
+            <tr>
+                <th>Name</th>
+                <th>Reg No</th>
+                <th>Placement Id</th>
+                <th>Placement Service Status</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th>Program</th>
+                <th>CGPA</th> 
+                <th>Reappear/Backlog</th>
+            </tr>
+            <tr>
+                <td>Aman Kumar </td>
+                <td>12007164</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>bdsfbsdfb@gmail.com</td>
+                <td>1234567890</td>
+                <td> CSE</td>
+                <td>8.00</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Ankit Kumar</td>
+                <td>12007484</td>
+                <td>128556</td>
+                <td>Active</td>
+                <td>asxjnsabsdfb@gmail.com</td>
+                <td>1234487890</td>
+                <td> ECE</td>
+                <td>7.00</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Suhani shah</td>
+                <td>12007150</td>
+                <td>122456</td>
+                <td>Active</td>
+                <td>xhsgdvxjfb@gmail.com</td>
+                <td>1235817890</td>
+                <td>Biotech</td>
+                <td>9.00</td>
+                <td>0</td>
+            </tr>
+            <td>Vivek kumar</td>
+            <td>12006500</td>
+            <td>122256</td>
+            <td>Active</td>
+            <td>jndkjcvxjfb@gmail.com</td>
+            <td>1235811230</td>
+            <td>CSE</td>
+            <td>7.50</td>
+            <td>0</td>
+        </tr>
+        </table>
+        
+
+   
+        
+
+
+        
+    </div>
+
+
+    <h1 id="filter students">Register/Filter Students</h1>
+    <div class="filter students">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+            <tr>
+                <th>Name</th>
+                <th>Reg No</th>
+                <th>Placement Id</th>
+                <th>Placement Service Status</th>
+                <th>Email</th>
+                <th>Contact No</th>
+                <th>Program</th>
+                <th>CGPA</th> 
+                <th>Reappear/Backlog</th>
+            </tr>
+            <tr>
+                <td>Aman Kumar </td>
+                <td>12007164</td>
+                <td>123456</td>
+                <td>Active</td>
+                <td>bdsfbsdfb@gmail.com</td>
+                <td>1234567890</td>
+                <td> CSE</td>
+                <td>8.00</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Ankit Kumar</td>
+                <td>12007484</td>
+                <td>128556</td>
+                <td>Active</td>
+                <td>asxjnsabsdfb@gmail.com</td>
+                <td>1234487890</td>
+                <td> ECE</td>
+                <td>7.00</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Suhani shah</td>
+                <td>12007150</td>
+                <td>122456</td>
+                <td>Active</td>
+                <td>xhsgdvxjfb@gmail.com</td>
+                <td>1235817890</td>
+                <td>Biotech</td>
+                <td>9.00</td>
+                <td>0</td>
+            </tr>
+            <td>Vivek kumar</td>
+            <td>12006500</td>
+            <td>122256</td>
+            <td>Active</td>
+            <td>jndkjcvxjfb@gmail.com</td>
+            <td>1235811230</td>
+            <td>CSE</td>
+            <td>7.50</td>
+            <td>0</td>
+        </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[6];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+        
+
+
+    <!-- </div>
+
+
+    <h1 id="drive registration">Drive Registration</h1>
+    <div class="drive registration">
+        <h2>Drive Registration</h2>
+        <p>Dear Student, you are eligible for COMPETETIVE EVENT of BROWSERSTACK. <br>
+           Date will be notified later. <br>
+           Check venue through UMS. <br>
+           Registration/De-registration open till Nov 22 2022 1:00PM. -LPU </p>
+        <p>Dear Student, you are eligible for COMPETETIVE EVENT of EPAM SYSTEM PVT LTD. <br>
+           Date will be notified later. <br>
+           Check venue through UMS. <br>
+           Registration/De-registration open till Nov 04 2022 1:00PM. -LPU</p>
+        <p>Dear Student, you are eligible for COMPETETIVE EVENT of L&T TECHNOLOGY SERVICES. <br>
+           Date will be notified later. <br>
+           Check venue through UMS. <br>
+           Registration/De-registration open till Sep 30 2022 2:00PM. -LPU</p>
+
+    </div> -->
+
+</body>
+</html>
